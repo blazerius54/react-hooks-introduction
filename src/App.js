@@ -6,13 +6,17 @@ import Character from './components/Character';
 const App = () => {
   const [selectedCharacter, charSelectHandler] = useState(1);
   const [destroyed, destructionHandler] = useState(false);
-  const [side, sideHandler] = useState('light');
+  const [side, setChosenSide] = useState('light');
 
   const onCharSelect = event => {
     const charId = event.target.value;
     charSelectHandler(charId);
   };
-  
+
+  const sideHandler = side => {
+    setChosenSide(side);
+  };
+
   return destroyed ? (
     <h1>Total destruction!</h1>
   ) : (
