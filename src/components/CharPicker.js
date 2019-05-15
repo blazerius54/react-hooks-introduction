@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {useHttp} from '../hooks/http';
 import './CharPicker.css';
 
@@ -11,8 +11,6 @@ const CharPicker = ({onCharSelect, selectedChar, side}) => {
         name: char.name,
         id: index + 1
       })) : [];
-
-  console.log(isLoading, selectedCharacters);
 
   let content = <p>Loading characters...</p>;
 
