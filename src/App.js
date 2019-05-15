@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import CharPicker from './components/CharPicker';
 import Character from './components/Character';
 
@@ -7,7 +6,6 @@ const App = () => {
   const [selectedCharacter, charSelectHandler] = useState(1);
   const [destroyed, destructionHandler] = useState(false);
   const [side, setChosenSide] = useState('light');
-
   const onCharSelect = event => {
     const charId = event.target.value;
     charSelectHandler(charId);
